@@ -16,3 +16,8 @@ Next Steps
 ----------
 - Validate the response with product, sales, and customer success leaders.
 - Expand each section with real customer quotes and data exports.
+
+Evaluation
+----------
+Score: 4
+Comment: Clear and coherent output.

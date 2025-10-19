@@ -1,52 +1,53 @@
 # Multi-Agent Orchestrator
 
-A minimal Python 3.11+ project that demonstrates how three lightweight AI-style agents (Planner → Researcher → Writer) can collaborate to satisfy a user request. The system is intentionally simple and avoids external API calls so it can run anywhere.
+## 🧠 Overview
+A multi-agent orchestration system where Planner, Researcher, and Writer collaborate to complete complex goals using shared memory, structured prompts, and observable state.
 
-## Features
-- Planner agent turns a goal into 2–3 concrete subtasks.
-- Researcher agent generates mock supporting context per subtask.
-- Writer agent blends structure and notes into a final response.
-- Orchestrator coordinates agents, persists outputs, and logs progress with Rich.
-- Memory stored in `data/memory.json` so previous runs can be inspected or cleared.
+## 🚀 Features
+- Sequenced Planner → Researcher → Writer pipeline
+- Rich logging for observability
+- JSON-based persistent memory with recall across sessions
+- CLI interface with `--clear-memory` flag
+- Modular architecture ready for UI or API integration
+- Optional evaluation and guardrails layer for reliability
 
-## Project Layout
-```
-multi-agent-orchestrator/
-├── src/
-│   ├── main.py
-│   ├── orchestrator.py
-│   ├── memory.py
-│   ├── agents/
-│   │   ├── planner.py
-│   │   ├── researcher.py
-│   │   └── writer.py
-│   └── utils/
-│       └── logger.py
-├── demo/
-│   └── example_output.txt
-├── requirements.txt
-└── README.md
+## ⚙️ Installation & Run
+```bash
+python -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+python -m src.main --goal "Plan a product launch strategy"
+python -m src.main --clear-memory # optional reset
 ```
 
-## Getting Started
-1. **Install dependencies** (Python 3.11+):
-   ```bash
-   python -m venv .venv
-   source .venv/bin/activate  # Windows: .venv\Scripts\activate
-   pip install -r requirements.txt
-   ```
+## 🧩 Architecture
+```
+User Input → Planner → Researcher → Writer → Evaluator → Memory (JSON)
+```
 
-2. **Run the orchestration demo**:
-   ```bash
-   python -m src.main --goal "Outline a strategy for launching a developer advocacy program."
-   ```
-   Omit `--goal` to be prompted interactively. Add `--clear-memory` to wipe prior run history.
+## 🪶 Persistent Memory
+- `data/memory.json` captures each run with goal, agent outputs, evaluation, and timestamps.
+- The orchestrator threads in the final outputs from the three most recent runs as prior context for the Planner.
+- This showcases long-lived agent state and continuity across sessions for richer, more coherent responses.
 
-3. **Explore stored memory**:
-   Inspect `data/memory.json` to review agent outputs across runs.
+## 🔍 Evaluation Layer
+- A heuristic evaluator scores Writer outputs (1–5) using length, structure, and keyword variety.
+- Results are logged in memory and surfaced in the CLI with Rich for immediate feedback.
+- `python -m src.main --evaluate-only` recalculates scores for stored runs without re-running agents.
 
-## Skills Demonstrated
-- Simple multi-agent coordination pattern.
-- Rich console logging with color-coded stages.
-- Lightweight persistent memory using JSON.
-- Clean project structure ready for extension (e.g., swap in real LLM calls or expose via FastAPI).
+## 🧰 Tech Stack
+- Python 3.11+
+- Rich for structured console output
+- LangGraph / CrewAI-ready agent interfaces
+- OpenAI SDK placeholder for future LLM integration
+- FastAPI-ready for API exposure (optional)
+
+## 🎥 Demo
+- Review `demo/example_output.txt` for a sample run, including evaluation metadata.
+- Run the CLI interactively to generate new outputs and inspect `data/memory.json` for stored history.
+
+## 🧠 Skills Demonstrated
+- Agent orchestration and reasoning
+- Prompt architecture and message passing
+- State management and persistence
+- Evaluation and introspection
+- Applied AI systems engineering
