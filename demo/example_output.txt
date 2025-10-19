@@ -1,0 +1,18 @@
+Goal: Outline a content marketing plan for a new SaaS analytics tool
+
+Approach
+--------
+1. Frame the objective and success criteria for the goal.
+2. Identify key insights, data points, or examples that support the story.
+3. Synthesize findings into a structured response for decision makers.
+
+Research Highlights
+-------------------
+- Customers need actionable dashboards with quick onboarding; emphasize ease-of-use.
+- Cite two early adopter case studies that show measurable ROI in under 60 days.
+- Address risks around data migration and propose onboarding support options.
+
+Next Steps
+----------
+- Validate the response with product, sales, and customer success leaders.
+- Expand each section with real customer quotes and data exports.

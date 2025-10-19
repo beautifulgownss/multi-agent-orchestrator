@@ -1,0 +1,32 @@
+[
+  {
+    "agent": "planner",
+    "goal": "Plan a content strategy for a robotics startup",
+    "plan": [
+      "Frame the objective and success criteria for: Plan a content strategy for a robotics startup",
+      "Identify key insights, data points, or examples relevant to: Plan a content strategy for a robotics startup",
+      "Synthesize findings into a structured response addressing: Plan a content strategy for a robotics startup"
+    ]
+  },
+  {
+    "agent": "researcher",
+    "notes": [
+      {
+        "subtask": "Frame the objective and success criteria for: Plan a content strategy for a robotics startup",
+        "summary": "Key findings #1: - outline the core need in 'Frame the objective and success criteria for: Plan a content strategy for a robotics startup'. - list supporting evidence or examples. - highlight potential risks, trade-offs, and opportunities."
+      },
+      {
+        "subtask": "Identify key insights, data points, or examples relevant to: Plan a content strategy for a robotics startup",
+        "summary": "Key findings #2: - outline the core need in 'Identify key insights, data points, or examples relevant to: Plan a content strategy for a robotics startup'. - list supporting evidence or examples. - highlight potential risks, trade-offs, and opportunities."
+      },
+      {
+        "subtask": "Synthesize findings into a structured response addressing: Plan a content strategy for a robotics startup",
+        "summary": "Key findings #3: - outline the core need in 'Synthesize findings into a structured response addressing: Plan a content strategy for a robotics startup'. - list supporting evidence or examples. - highlight potential risks, trade-offs, and opportunities."
+      }
+    ]
+  },
+  {
+    "agent": "writer",
+    "final_answer": "Goal: Plan a content strategy for a robotics startup\nTone: professional\n\nApproach:\n  1. Frame the objective and success criteria for: Plan a content strategy for a robotics startup\n  2. Identify key insights, data points, or examples relevant to: Plan a content strategy for a robotics startup\n  3. Synthesize findings into a structured response addressing: Plan a content strategy for a robotics startup\n\nEvidence & Considerations:\n- Key findings #1: - outline the core need in 'Frame the objective and success criteria for: Plan a content strategy for a robotics startup'. - list supporting evidence or examples. - highlight potential risks, trade-offs, and opportunities.\n- Key findings #2: - outline the core need in 'Identify key insights, data points, or examples relevant to: Plan a content strategy for a robotics startup'. - list supporting evidence or examples. - highlight potential risks, trade-offs, and opportunities.\n- Key findings #3: - outline the core need in 'Synthesize findings into a structured response addressing: Plan a content strategy for a robotics startup'. - list supporting evidence or examples. - highlight potential risks, trade-offs, and opportunities.\n\nRecommended Next Steps:\n- Validate the synthesized insights with stakeholders.\n- Iterate on the response as new information appears."
+  }
+]
